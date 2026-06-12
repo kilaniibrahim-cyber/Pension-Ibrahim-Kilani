@@ -448,24 +448,27 @@
 
                 <!-- שאלות ההקשר המשפטיות הדינמיות (שלב 4 - פסיקה) -->
                 <div id="dynamic-context-container" class="context-box" style="display: none;">
-                    <div id="context-bniya" style="display: none;">
-                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקת בית הדין הארצי (הלכת חשמל כרמיאל):</label>
-                        <label><input type="checkbox" id="ctx_bniya_project" checked> האם פעילות זו מבוצעת בפועל כחלק מתהליך של <strong>מיזם בנייה / אתר בנייה אקטיבי</strong>? (להוציא עבודות אחזקה שוטפות או תיקונים קטנים למבנה קיים).</label>
-                    </div>
-                    <div id="context-security-licensing" style="display: none;">
-                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת תנאי רישוי (מבחן אבחנת שמירה מול מוקד וסיור):</label>
-                        <label><input type="checkbox" id="ctx_has_security_license"> האם המעסיק מחזיק ברישיון כדין לפעול כקבלן שירותי שמירה ואבטחה?</label>
-                    </div>
-                    <div id="context-catering-type" style="display: none;">
-                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ הגדרת פעילות בתחום המזון (מבחן הסעדה מוסדית מול מסעדות):</label>
-                        <label><input type="checkbox" id="ctx_is_institutional_catering"> האם העיסוק הוא מתן שירות <strong>הסעדה פנימית/מוסדית קבועה</strong> אצל מזמיני שירות (חברות, מוסדות, בתי ספר, כוחות ביטחון, קפיטריות במקומות עבודה)?</label>
-                    </div>
-                    <div id="context-retail" style="display: none;">
-                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקה (הלכת אלינור דמקו אבבה / נטל הוכחה גיאוגרפי):</label>
-                        <label><input type="checkbox" id="ctx_retail_excl"> האם המעסיק לא מחזיק רישיון קבלן שירות בתחום הניקיון?</label>
-                    </div>
-                </div>
-
+    <div id="context-bniya" style="display: none;">
+        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקת בית הדין הארצי (הלכת חשמל כרמיאל):</label>
+        <label><input type="checkbox" id="ctx_bniya_project" checked> האם פעילות זו מבוצעת בפועל כחלק מתהליך של <strong>מיזם בנייה / אתר בנייה אקטיבי</strong>? (להוציא עבודות אחזקה שוטפות או תיקונים קטנים למבנה קיים).</label>
+    </div>
+    <div id="context-security-licensing" style="display: none;">
+        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת תנאי רישוי (מבחן אבחנת שמירה מול מוקד וסיור):</label>
+        <label><input type="checkbox" id="ctx_has_security_license"> האם המעסיק מחזיק ברישיון כדין לפעול כקבלן שירותי שמירה ואבטחה?</label>
+    </div>
+    <div id="context-catering-type" style="display: none;">
+        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ הגדרת פעילות בתחום המזון (מבחן הסעדה מוסדית מול מסעדות):</label>
+        <label><input type="checkbox" id="ctx_is_institutional_catering"> האם העיסוק הוא מתן שירות <strong>הסעדה פנימית/מוסדית קבועה</strong> אצל מזמיני שירות (חברות, מוסדות, בתי ספר, כוחות ביטחון, קפיטריות במקומות עבודה)?</label>
+    </div>
+    <div id="context-transport-vehicle" style="display: none;">
+        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ הגדרת סוג כלי הרכב (מבחן סייגי תנאי סף בענף ההיסעים):</label>
+        <label><input type="checkbox" id="ctx_is_valid_transport_vehicle"> האם חברת ההסעה מעסיקה עובדים בהסעות פרטיות ב**"אוטובוס"** (23 מקומות ישיבה ומעלה) או **"מיניבוס"** (22-19 מקומות ישיבה) או **"אוטובוס ציבורי זעיר"** (עד 19 מקומות ישיבה ומוגדר כך ברישיון הרכב)?</label>
+    </div>
+    <div id="context-retail" style="display: none;">
+        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקה (הלכת אלינור דמקו אבבה / נטל הוכחה גיאוגרפי):</label>
+        <label><input type="checkbox" id="ctx_retail_excl"> האם המעסיק לא מחזיק רישיון קבלן שירות בתחום הניקיון?</label>
+    </div>
+</div>
                 <div class="form-group full-width" style="margin-top: 15px; margin-bottom: 15px;">
                     <label for="businessDesc"><span class="required">*</span> תיאור מלא של פעילות העסק, מוצרים ושירותים (לקביעת עיקר העיסוק)</label>
                     <textarea id="businessDesc" rows="4" placeholder="תאר כאן בפירוט את עיסוקו המרכזי של המעסיק. מנוע ההחלטה ינתח שדה זה באופן מהותי לצורך חילוץ צו ההרחבה המתאים גם אם השדות האחרים ריקים..."></textarea>
