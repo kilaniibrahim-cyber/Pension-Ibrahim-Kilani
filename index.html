@@ -376,12 +376,20 @@
                 display: block !important;
             }
         }
+
+        .context-box {
+            background-color: #f0f7ff;
+            border: 1px solid #bae6fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>הזכאות לפנסיה לפי צווי הרחבה – היחידה ליחסי עבודה</h1>
+        <h1>תחולת צווי הרחבה והזכאות לפנסיה לפי צווי הרחבה – היחידה ליחסי עבודה</h1>
         <p>מערכת מומחה מקצועית מקיפה לניתוח ותחולת צווי הרחבה ענפיים במשק והזכות לביטוח פנסיה- הוכן על ידי עו"ד אבראהים כילאני, ראש צוות ייעוץ משפטי (יחסי עבודה) - היחידה ליחסי עבודה - לשימוש פנימי בלבד</p>
     </header>
 
@@ -395,33 +403,33 @@
         
         <section id="page-input" class="page active">
             <div class="card">
-                <h2>נתוני מזהים של המעסיק והעסק</h2>
+                <h2>נתוני מזהים של המעסיק והעסק (שלב 1 לבחינת התחולה)</h2>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="compName">שם המעסיק / חברה</label>
                         <input type="text" id="compName" placeholder="לדוגמה: משה כהן הובלות בע&quot;מ">
                     </div>
                     <div class="form-group">
-                        <label for="mainSector">תחום פעילות כללי (סיווג משוער)</label>
+                        <label for="mainSector"><span class="required">*</span> סיווג ענף כלכלי ראשי של המעסיק (למ"ס 2011)</label>
                         <select id="mainSector" onchange="handleSectorChange()">
-                            <option value="">-- בחר תועד מועדף --</option>
-                            <option value="בנייה">בנייה, תשתיות, צמ&quot;ה ושיפוצים</option>
-                            <option value="הובלה">הובלה (רכבי משא מעל 4 טון)</option>
-                            <option value="חקלאות">חקלאות, גננות נוי ומשתלות</option>
-                            <option value="רשתות שיווק">רשתות שיווק מזון</option>
-                            <option value="ניקיון">ניקיון ותחזוקה</option>
-                            <option value="שמירה">שמירה ואבטחה</option>
-                            <option value="מוקד">מוקד וסיור</option>
-                            <option value="מתכת">מתכת, חשמל ואלקטרוניקה (עד 20 עובדים)</option>
-                            <option value="מלונאות">מלונאות ואירוח</option>
-                            <option value="היסעים">היסעים (נוסעים באוטובוסים/מיניבוס)</option>
-                            <option value="הסעדה">שירותי הסעדה, אולמות ואירועים</option>
-                            <option value="כוח אדם">אספקת שירותי כוח אדם</option>
-                            <option value="מוסכים">מוסכים ובתי מלאכה לרכב</option>
-                            <option value="קולנוע">קולנוע, טלוויזיה והפקות</option>
-                            <option value="יהלומים">ענף היהלומים</option>
-                            <option value="יבוא מסחר">יבוא, מסחר ושירותים</option>
-                            <option value="תעשייה">תעשייה (כללי - מעל 20 עובדים)</option>
+                            <option value="">-- בחר סיווג ענף לפי למ"ס --</option>
+                            <option value="בנייה">ענף 41-43 - בנייה, תשתיות, צמ&quot;ה ושיפוצים</option>
+                            <option value="הובלה">ענף 4923 - הובלת מטענים בדרכים (רכבי משא)</option>
+                            <option value="חקלאות">ענף 01-02 - חקלאות, גננות נוי ומשתלות</option>
+                            <option value="רשתות שיווק">ענף 4711 - רשתות שיווק מזון קמעונאיות</option>
+                            <option value="ניקיון">ענף 812 - שירותי ניקיון ותחזוקה (קבלני שירות)</option>
+                            <option value="שמירה">ענף 801 - שירותי שמירה ואבטחה</option>
+                            <option value="מוקד">ענף 802 - שירותי מוקד וסיור</option>
+                            <option value="מתכת">ענף 24-25 - מתכת, חשמל ואלקטרוניקה (עד 20 עובדים)</option>
+                            <option value="מלונאות">ענף 551 - מלונאות ואירוח</option>
+                            <option value="היסעים">ענף 4922 - היסעים ותחבורה פרטית באוטובוסים</option>
+                            <option value="הסעדה">ענף 56 - שירותי הסעדה, מסעדות ואולמות אירועים</option>
+                            <option value="כוח אדם">ענף 782 - אספקת שירותי כוח אדם</option>
+                            <option value="מוסכים">ענף 452 - מוסכים ובתי מלאכה לתיקון רכב</option>
+                            <option value="קולנוע">ענף 59 - קולנוע, טלוויזיה והפקות</option>
+                            <option value="יהלומים">ענף 3212 - ענף היהלומים</option>
+                            <option value="יבוא מסחר">ענף 46 - יבוא, מסחר סיטונאי ושירותים</option>
+                            <option value="תעשייה">ענף 10-33 - תעשייה וייצור (כללי - מעל 20 עובדים)</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -438,8 +446,28 @@
                     </div>
                 </div>
 
-                <div class="form-group full-width" style="margin-bottom: 15px;">
-                    <label for="businessDesc"><span class="required">*</span> תיאור מלא של פעילות העסק, מוצרים ושירותים</label>
+                <!-- שאלות ההקשר המשפטיות הדינמיות (שלב 4 - פסיקה) -->
+                <div id="dynamic-context-container" class="context-box" style="display: none;">
+                    <div id="context-bniya" style="display: none;">
+                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקת בית הדין הארצי (הלכת חשמל כרמיאל):</label>
+                        <label><input type="checkbox" id="ctx_bniya_project" checked> האם פעילות זו מבוצעת בפועל כחלק מתהליך של <strong>מיזם בנייה / אתר בנייה אקטיבי</strong>? (להוציא עבודות אחזקה שוטפות או תיקונים קטנים למבנה קיים).</label>
+                    </div>
+                    <div id="context-security-licensing" style="display: none;">
+                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת תנאי רישוי (מבחן אבחנת שמירה מול מוקד וסיור):</label>
+                        <label><input type="checkbox" id="ctx_has_security_license"> האם המעסיק מחזיק ברישיון כדין לפעול כקבלן שירותי שמירה ואבטחה?</label>
+                    </div>
+                    <div id="context-catering-type" style="display: none;">
+                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ הגדרת פעילות בתחום המזון (מבחן הסעדה מוסדית מול מסעדות):</label>
+                        <label><input type="checkbox" id="ctx_is_institutional_catering"> האם העיסוק הוא מתן שירות <strong>הסעדה פנימית/מוסדית קבועה</strong> אצל מזמיני שירות (חברות, מוסדות, בתי ספר, כוחות ביטחון, קפיטריות במקומות עבודה)?</label>
+                    </div>
+                    <div id="context-retail" style="display: none;">
+                        <label style="color: var(--primary-color); display: block; margin-bottom: 5px;">⚡ בדיקת עובדות לפי פסיקה (הלכת אלינור דמקו אבבה / נטל הוכחה גיאוגרפי):</label>
+                        <label><input type="checkbox" id="ctx_retail_excl"> האם מדובר במסעדה/דוכן מזון מהיר או עסק שהוחרג מפורשות מצו המסחר הסיטונאי?</label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width" style="margin-top: 15px; margin-bottom: 15px;">
+                    <label for="businessDesc"><span class="required">*</span> תיאור מלא של פעילות העסק, מוצרים ושירותים (לקביעת עיקר העיסוק)</label>
                     <textarea id="businessDesc" rows="4" placeholder="תאר כאן בפירוט את עיסוקו המרכזי של המעסיק. מנוע ההחלטה ינתח שדה זה באופן מהותי לצורך חילוץ צו ההרחבה המתאים גם אם השדות האחרים ריקים..."></textarea>
                 </div>
             </div>
@@ -461,9 +489,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td><input type="text" value="גרעין הפעילות המרכזי" style="width:100%"></td>
-                                <td><input type="number" value="" oninput="calcStaffPercentages()" style="width:100%"></td>
-                                <td><input type="number" readonly class="pct-field" style="width:100%"></td>
+                                <td><input type="text" value="גרעין הפעילות המרכזי" style="width:100%" class="form-control"></td>
+                                <td><input type="number" value="" oninput="calcStaffPercentages()" style="width:100%" class="form-control"></td>
+                                <td><input type="number" readonly class="pct-field form-control" style="width:100%"></td>
                                 <td class="no-print"><button class="btn btn-danger" onclick="deleteRow(this)">מחק</button></td>
                             </tr>
                         </tbody>
@@ -473,7 +501,7 @@
             </div>
 
             <div class="card">
-                <h2>נתוני העובד הספציפי שנבחן</h2>
+                <h2>נתוני העובד הספציפי שנבחן (שלב 3 - הגדרת עובד)</h2>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="workerRole">תפקיד העובד</label>
@@ -537,9 +565,7 @@
                 </div>
             </div>
 
-            <button class="btn btn-primary no-print" onclick="generateLegalOpinion()">
-                הפעל מנוע החלטה והפק חוות דעת מנומקת
-            </button>
+            <button class="btn btn-primary no-print" onclick="generateLegalOpinion()"> הפעל מנוע החלטה והפק חוות דעת מנומקת </button>
         </section>
 
         <section id="page-output" class="page">
@@ -548,7 +574,6 @@
                 <button class="btn" onclick="window.print()">הדפסה או שמירה כ-PDF</button>
                 <button class="btn btn-danger" onclick="switchPage('input', event)" style="background-color: var(--text-muted)">חזרה לסימולטור</button>
             </div>
-
             <div id="opinion-container" class="card">
                 <p style="text-align:center; color: var(--text-muted);">טרם הופקה חוות דעת. מלא את נתוני המינימום בסימולטור ולחץ על כפתור ההפעלה.</p>
             </div>
@@ -560,33 +585,26 @@
                 <div class="search-box no-print">
                     <input type="text" id="libSearch" onkeyup="filterLibrary()" placeholder="חפש ענף, מילת מפתח או פסיקה..." style="width: 100%">
                 </div>
-                
                 <div class="library-grid">
-                    <div class="lib-menu" id="libMenu">
-                        </div>
+                    <div class="lib-menu" id="libMenu"></div>
                     <div class="lib-content" id="libContent">
                         <p style="color: var(--text-muted); text-align: center;">בחר ענף מהתפריט הימני לצפייה בפרטים המלאים ובסעיפי החוק.</p>
                     </div>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
         <p>
-            <span class="highlight">הזכאות לפנסיה לפי צווי הרחבה – היחידה ליחסי עבודה</span> | 
-            הוכן, רוכז ונערך על ידי <span class="highlight">עו"ד אבראהים כילאני</span>, ראש צוות ייעוץ משפטי (יחסי עבודה). | 
-            <span class="highlight">לשימוש פנימי בלבד.</span> | 
-            כל הזכויות שמורות ל<span class="highlight">עו"ד אבראהים כילאני</span>.
+            <span class="highlight">הזכאות לפנסיה לפי צווי הרחבה – היחידה ליחסי עבודה</span> | הוכן, רוכז ונערך על ידי <span class="highlight">עו"ד אבראהים כילאני</span>, ראש צוות ייעוץ משפטי (יחסי עבודה). | <span class="highlight">לשימוש פנימי בלבד.</span> | כל הזכויות שמורות ל<span class="highlight">עו"ד אבראהים כילאני</span>.
         </p>
     </footer>
 
     <script>
-        // --- מאגר המידע המלא והמשולב של צווי ההרחבה  ---
+        // --- מאגר המידע המלא והמשולב של צווי ההרחבה ---
         const libraryData = {
-           
- "בנייה": {
+            "בנייה": {
                 name: "בנייה, תשתיות, צמ\"ה ושיפוצים",
                 orders: "צווי 2015, נספח מנופאים 2017, צו עדכון 2018. צו 2015 ביטל את צו 2010 הישן.",
                 employerDef: "כל מעסיק בתחומי הבינוי, התשתיות, עבודות ציבוריות, הנדסה אזרחית, צמ\"ה ושיפוצים (ענפים ראשיים 41-43 לסיווג הלמ\"ס).",
@@ -816,429 +834,336 @@
                 cbs: { mainCode: "U", mainTitle: "פעילויות של ארגונים וגופים חוץ-מדינתיים", subCode: "99", subTitle: "פעילויות של ארגונים חוץ-מדינתיים", microCode: "9900", microTitle: "פעילויות של גופים שאינם מסווגים בענפים מוגדרים" }
             }                  
   };
-
-        // --- פונקציות ניווט ומעבר עמודים בטוחות ותקינות ---
+        // --- פונקציית מעבר בין דפים ---
         function switchPage(pageId, event) {
-            if (event) {
-                event.preventDefault();
-            }
+            if (event) event.preventDefault();
+            document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+            document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
             
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
-            
-            const targetPage = document.getElementById('page-' + pageId);
-            if (targetPage) {
-                targetPage.classList.add('active');
-            }
-            
-            const targetBtn = document.getElementById('btn-' + pageId);
-            if (targetBtn) {
-                targetBtn.classList.add('active');
-            }
-
+            document.getElementById(`page-${pageId}`).classList.add('active');
+            document.getElementById(`btn-${pageId}`).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // --- ניהול טבלת כוח אדם דינמית ---
+        // --- ניהול הצגת שדות ההקשר המשפטיות הדינמיים ---
+        function handleSectorChange() {
+            const sector = document.getElementById("mainSector").value;
+            const contextContainer = document.getElementById("dynamic-context-container");
+            const ctxBniya = document.getElementById("context-bniya");
+            const ctxSecurity = document.getElementById("context-security-licensing");
+            const ctxCatering = document.getElementById("context-catering-type");
+            const ctxRetail = document.getElementById("context-retail");
+
+            contextContainer.style.display = "none";
+            ctxBniya.style.display = "none";
+            ctxSecurity.style.display = "none";
+            ctxCatering.style.display = "none";
+            ctxRetail.style.display = "none";
+
+            if (sector === "בנייה") {
+                contextContainer.style.display = "block";
+                ctxBniya.style.display = "block";
+            } else if (sector === "שמירה" || sector === "מוקד") {
+                contextContainer.style.display = "block";
+                ctxSecurity.style.display = "block";
+            } else if (sector === "הסעדה") {
+                contextContainer.style.display = "block";
+                ctxCatering.style.display = "block";
+            } else if (sector === "יבוא מסחר" || sector === "ניקיון") {
+                contextContainer.style.display = "block";
+                ctxRetail.style.display = "block";
+            }
+        }
+
+        // --- הוספה ומחיקה של שורות כוח אדם ---
         function addStaffRow() {
-            const tbody = document.querySelector('#staffTable tbody');
-            const row = document.createElement('tr');
+            const tbody = document.querySelector("#staffTable tbody");
+            const row = document.createElement("tr");
             row.innerHTML = `
-                <td><input type="text" placeholder="תחום / מחלקה נוספת" style="width:100%"></td>
-                <td><input type="number" placeholder="מספר עובדים" oninput="calcStaffPercentages()" style="width:100%"></td>
-                <td><input type="number" readonly class="pct-field" style="width:100%"></td>
+                <td><input type="text" placeholder="שם המחלקה/התחום" style="width:100%" class="form-control"></td>
+                <td><input type="number" placeholder="0" oninput="calcStaffPercentages()" style="width:100%" class="form-control"></td>
+                <td><input type="number" readonly class="pct-field form-control" style="width:100%"></td>
                 <td class="no-print"><button class="btn btn-danger" onclick="deleteRow(this)">מחק</button></td>
             `;
             tbody.appendChild(row);
         }
 
         function deleteRow(btn) {
-            const row = btn.closest('tr');
-            row.remove();
+            btn.closest("tr").remove();
             calcStaffPercentages();
         }
 
         function calcStaffPercentages() {
-            const rows = document.querySelectorAll('#staffTable tbody tr');
+            const rows = document.querySelectorAll("#staffTable tbody tr");
             let total = 0;
-            
             rows.forEach(row => {
-                const numInput = row.querySelectorAll('input')[1];
-                if (numInput && numInput.value) {
-                    total += parseInt(numInput.value) || 0;
-                }
+                const num = parseFloat(row.querySelectorAll("input")[1].value) || 0;
+                total += num;
             });
-
             rows.forEach(row => {
-                const numInput = row.querySelectorAll('input')[1];
-                const pctInput = row.querySelector('.pct-field');
-                if (numInput && pctInput) {
-                    const val = parseInt(numInput.value) || 0;
-                    if (total > 0 && val > 0) {
-                        pctInput.value = ((val / total) * 100).toFixed(1);
-                    } else {
-                        pctInput.value = "";
-                    }
-                }
-            });
-        }
-
-        function handleSectorChange() {
-            const sector = document.getElementById('mainSector').value;
-            const desc = document.getElementById('businessDesc');
-            if (sector && !desc.value) {
-                desc.value = "חברה העוסקת בעיקר בתחום ה" + sector + " ומספקת שירותים רלוונטיים ללקוחותיה בישראל.";
-            }
-        }
-
-        // --- מנוע ההחלטה והניתוח המשפטי המהותי ---
-        function generateLegalOpinion() {
-            const businessDesc = document.getElementById('businessDesc').value.trim();
-            const empCountVal = document.getElementById('empCount').value.trim();
-            const compName = document.getElementById('compName').value.trim() || "לא הוזן שם מעסיק";
-            const mainSector = document.getElementById('mainSector').value;
-            const numBranches = document.getElementById('numBranches').value.trim();
-            
-            const workerRole = document.getElementById('workerRole').value.trim();
-            const workerSeniority = document.getElementById('workerSeniority').value.trim();
-            const workerAge = document.getElementById('workerAge').value.trim();
-            const pensionStatus = document.getElementById('pensionStatus').value;
-            
-            const salaryBase = parseFloat(document.getElementById('salaryBase').value) || 0;
-            const salaryCommissions = parseFloat(document.getElementById('salaryCommissions').value) || 0;
-            const salaryPremiums = parseFloat(document.getElementById('salaryPremiums').value) || 0;
-            const salaryAllowances = parseFloat(document.getElementById('salaryAllowances').value) || 0;
-
-            if (!businessDesc || !empCountVal) {
-                alert("שגיאה: חובה למלא את שדות החובה המסומנים בכוכבית (*):\n1. תיאור מלא של פעילות העסק\n2. מספר עובדים כולל בעסק");
-                return;
-            }
-
-            const empCount = parseInt(empCountVal) || 0;
-            
-            // --- אלגוריתם חילוץ והכרעת צו ההרחבה (מנגנון הכרעה משפטי וסיווג אחיד) ---
-            let detectedKey = "פנסיה חובה";
-            let matchReason = "לא זוהה ענף ספציפי מובהק בתיאור הפעילות. חלה רשת הביטחון הכללית של המשק.";
-            let confidenceLevel = "65%";
-            
-            const textToAnalyze = (businessDesc + " " + mainSector + " " + workerRole).toLowerCase();
-
-            if (textToAnalyze.includes("בנייה") || textToAnalyze.includes("תשתיות") || textToAnalyze.includes("שיפוץ") || textToAnalyze.includes("מנופאי") || textToAnalyze.includes("עגורן") || mainSector === "בנייה") {
-                detectedKey = "בנייה";
-                matchReason = "ניתוח מהותי של תיאור הפעילות, מחלקות כוח האדם ומאפייני האתר מצביע על זיקה ישירה לענפי הבינוי וההנדסה האזרחית. החברה מסווגת על פי הסיווג האחיד תחת סדר F (בינוי), ענף ראשי 43, המשקף ביצוע עבודות בנייה מיוחדות והתקנות באתרים. בהתאם למבחן עיקר העיסוק והפסיקה המנחה בבר\"ע 59618-01-23, נקבעה תחולת צו הבנייה.";
-                confidenceLevel = "95%";
-            } else if (textToAnalyze.includes("הובלה") || textToAnalyze.includes("משא") || textToAnalyze.includes("מטען") || mainSector === "הובלה") {
-                detectedKey = "הובלה";
-                matchReason = "החברה מפעילה מערך שינוע והובלת מטענים ברכבי משא כבדים מעל 4 טון המהווה מרכז רווח מובחן או עיסוק דומיננטי. על פי הסיווג האחיד, הפעילות משויכת לסדר H (תחבורה ואחסנה), ענף ראשי 49 (תחבורה יבשתית). הצלבת נתוני העסק וחלוקת כוח האדם עם הפסיקה בע\"ע 78240-07-25 מובילה להחלת צו ההרחבה בענף ההובלה.";
-                confidenceLevel = "92%";
-            } else if (textToAnalyze.includes("חקלאות") || textToAnalyze.includes("גינון") || textToAnalyze.includes("משתל") || textToAnalyze.includes("אריזה") || mainSector === "חקלאות") {
-                detectedKey = "חקלאות";
-                matchReason = "פעילות העסק מתמצתת בעיבוד אדמה, גידול, אריזת תוצרת חקלאית או פיתוח נוי וגינון קבלני. הסיווג האחיד משייך פעילות זו לסדר A (חקלאות, ייעור ודיג), ענף ראשי 01. שילוב תיאור הפעילות ומבחני עיקר העיסוק מחיל את צו החקלאות והגינון.";
-                confidenceLevel = "88%";
-            } else if (textToAnalyze.includes("ניקיון") || textToAnalyze.includes("תחזוקה") || mainSector === "ניקיון") {
-                detectedKey = "ניקיון";
-                matchReason = "העסק מספק שירותי ניקיון מבנים, קבלנות תחזוקה או הצבת עובדי ניקיון באתרי משתמשים. על פי הסיווג האחיד, החברה משויכת לסדר N (שירותי ניהול ותמיכה), ענף ראשי 81. בהתאם לחוק הגברת האכיפה ולמבחני תבנית ההעסקה המשולשת בע\"ע 33745-12-21, חל צו הניקיון המקיף.";
-                confidenceLevel = "96%";
-            } else if (textToAnalyze.includes("שמירה") || textToAnalyze.includes("אבטחה") || mainSector === "שמירה") {
-                detectedKey = "שמירה";
-                matchReason = "המעסיק פועל כקבלן מורשה לאספקת שירותי שמירה ואבטחה אנושית פיזית. הסיווג האחיד משייך את הפעילות לסדר N (שירותי ניהול ותמיכה), ענף ראשי 80 (שירותי אבטחה וחקירות). חלוקת כוח האדם מראה כי עיקר הפעילות מוקצה לתחום זה, ולכן חל צו השמירה הענפי.";
-                confidenceLevel = "94%";
-            } else if (textToAnalyze.includes("מוקד") || textToAnalyze.includes("סיור") || textToAnalyze.includes("אזעקה") || mainSector === "מוקד") {
-                detectedKey = "מוקד";
-                matchReason = "הפעילות מאופיינת בהפעלת מוקד בקרה מבצעי, סיור טכנולוגי חכם ומערכות התרעה אלקטרוניות. הסיווג האחיד מבחין בין שמירה מסורתית למוקדים ומסווג זאת תחת תת-ענף 8020. בהתאם לפסיקה המנחה בע\"ע 11801-02-23 המדגישה ייחודיות זו, חל צו מוקד וסיור.";
-                confidenceLevel = "91%";
-            } else if ((textToAnalyze.includes("רשת") || textToAnalyze.includes("סופרמרקט") || textToAnalyze.includes("מזון") || mainSector === "רשתות שיווק") && (parseInt(numBranches) >= 2 || empCount > 30)) {
-                detectedKey = "רשתות שיווק";
-                matchReason = "העסק עונה על תנאי הסף להגדרת רשת שיווק מזון קמעונאית בשל נפח פעילות רחב, סניפים מרובים או שטח מכירה העולה על 500 מ\"ר. על פי הסיווג האחיד, המפעל משויך לסדר G (מסחר), ענף ראשי 47, תת-ענף 4711. מבחן עיקר העיסוק מחיל את צו רשתות המזון 2010.";
-                confidenceLevel = "89%";
-            } else if (textToAnalyze.includes("מתכת") || textToAnalyze.includes("מסגר") || textToAnalyze.includes("אלקטרוניקה") || mainSector === "מתכת") {
-                if (empCount <= 20) {
-                    detectedKey = "מתכת";
-                    matchReason = "העסק פועל כבית מלאכה יצרני או קבלני לעיבוד מתכת, מסגרות מבנית או ליפוף וחשמל, ומעסיק עד 20 עובדים. הסיווג האחיד משייך את היחידה לסדר C (תעשייה), ענף ראשי 25. בהתאם למגבלת נפח כוח האדם הקשיחה, חל צו המתכת ההיסטורי.";
-                    confidenceLevel = "87%";
+                const num = parseFloat(row.querySelectorAll("input")[1].value) || 0;
+                const pctField = row.querySelector(".pct-field");
+                if (total > 0) {
+                    pctField.value = ((num / total) * 100).toFixed(1);
                 } else {
-                    detectedKey = "תעשייה";
-                    matchReason = "מדובר במפעל ייצור ועיבוד מתכת או אלקטרוניקה, אולם מאחר שמצבת כוח האדם הכוללת עולה על 20 עובדים, חלה החרגה המעבירה את תחולת העסק מסדר המתכת הזעיר ישירות אל צו ההרחבה הכללי בתעשייה (סדר C, ענף ראשי 10-33).";
-                    confidenceLevel = "90%";
+                    pctField.value = "";
                 }
-            } else if (textToAnalyze.includes("מפעל") || textToAnalyze.includes("ייצור") || textToAnalyze.includes("תעשיי") || mainSector === "תעשייה") {
-                detectedKey = "תעשייה";
-                matchReason = "הפעילות הדומיננטית היא ייצור פיזי תעשייתי והפיכת חומרי גלם למוצרים מוגמרים, תוך הפעלת קווי ייצור. על פי הסיווג האחיד של הלמ\"ס, המפעל משויך במובהק לסדר C (תעשייה). שילוב חלוקת העובדים ומבחני הפסיקה בע\"ע 45930-09-25 מחיל את צו התעשייה הכללי.";
-                confidenceLevel = "93%";
-            } else if (textToAnalyze.includes("חנות") || textToAnalyze.includes("משרד") || textToAnalyze.includes("לשכת המסחר") || textToAnalyze.includes("יבוא") || textToAnalyze.includes("שירותים") || mainSector === "יבוא מסחר") {
-                detectedKey = "יבוא מסחר";
-                matchReason = "החברה עוסקת במסחר סיטונאי, יבוא והפצה, או מתן שירותים עסקיים לחברות ללא ייצור פיזי. הסיווג האחיד משייך את העסק לסדר G (מסחר סיטוני), ענף ראשי 46. מכוח ההלכה המנחה בע\"ע 2580-03-11 המרחיבה את התחולה לענפי השירותים במחוזות הרלוונטיים, חל צו יבוא ומסחר.";
-                confidenceLevel = "86%";
-            }
+            });
+        }
 
-            const branch = libraryData[detectedKey];
+        // =========================================================================
+        // מנוע ההכרעה המשפטי התלת-שלבי (משופר ביצועים ולוגיקת קבלה/חסימה)
+        // =========================================================================
+        function generateLegalOpinion() {
+            try {
+                // קריאת נתוני המעסיק והעסק
+                const compName = document.getElementById("compName").value.trim() || "לא הוזן שם מעסיק";
+                const selectedSector = document.getElementById("mainSector").value;
+                const empCount = parseInt(document.getElementById("empCount").value) || 0;
+                const businessDesc = document.getElementById("businessDesc").value.trim();
 
-            let specialRoleWarning = "";
-            if (detectedKey === "בנייה" && workerRole.includes("מנופאי")) {
-                specialRoleWarning = "<strong>החרגה ייחודית:</strong> העובד מוגדר כמנופאי. חלים עליו התנאים הכספיים והבטיחותיים המועדפים של נספח מנופאים 2017 (שכר שעתי מינימלי מוגן, תוספות מאמץ וסיכון וקבינה מאובזרת במזגן).";
-            } else if (detectedKey === "הובלה" && workerRole && !workerRole.includes("נהג")) {
-                specialRoleWarning = "<strong>התראה משפטית:</strong> צו ההרחבה בענף ההובלה חל קטגורית על נהגים ברכבים מעל 4 טון. מכיוון שתפקיד העובד שהוזן אינו נהג מובהק, ייתכן שעל עובד מטה/משרד זה חל צו יבוא ומסחר או פנסיה חובה חלף צו ההובלה.";
-            }
+                // קריאת נתוני העובד
+                const workerRole = document.getElementById("workerRole").value.trim() || "לא הוזן תפקיד עובד";
+                const workerDept = document.getElementById("workerDept").value.trim() || "לא הוזן מידע";
+                const workerSeniority = parseInt(document.getElementById("workerSeniority").value) || 0;
+                const workerAge = parseInt(document.getElementById("workerAge").value) || 0;
+                const pensionStatus = document.getElementById("pensionStatus").value;
+                const employmentType = document.getElementById("employmentType").value;
 
-            let calculatedDateText = branch.eligibility;
-            if (pensionStatus === "active") {
-                calculatedDateText = "חל הסדר פנסיוני פעיל קודם: העובד זכאי להפרשות החל מיום העבודה הראשון (צו פנסיה חובה / הוראות פסיקה משולבות).";
-            }
+                // רכיבי שכר
+                const salaryBase = parseFloat(document.getElementById("salaryBase").value) || 0;
+                const salaryCommissions = parseFloat(document.getElementById("salaryCommissions").value) || 0;
+                const salaryPremiums = parseFloat(document.getElementById("salaryPremiums").value) || 0;
+                const salaryBonuses = parseFloat(document.getElementById("salaryBonuses").value) || 0;
+                const salaryAllowances = parseFloat(document.getElementById("salaryAllowances").value) || 0;
+                const salaryExpenses = parseFloat(document.getElementById("salaryExpenses").value) || 0;
 
-            let salaryBreakdownHTML = "";
-            let totalInsuredSalary = 0;
-            
-            if (salaryBase > 0) {
-                let baseFactor = 1.0;
-                let calculationLog = "שכר יסוד נכלל במלואו (100%).";
-                
-                if (detectedKey === "הובלה") {
-                    baseFactor = 1.5;
-                    calculationLog = "על פי הוראות ענף ההובלה, הבסיס להפרשות מורחב ועומד על 150% משכר היסוד והרכיבים הקבועים!";
+                // ולידציה של שדות חובה מובנים
+                if (!selectedSector || !businessDesc || empCount <= 0) {
+                    alert("שגיאה: יש לבחור ענף כלכלי ראשי, להזין מספר עובדים תקין, ולמלא את תיאור פעילות העסק.");
+                    return;
                 }
-                
-                totalInsuredSalary += (salaryBase * baseFactor);
-                
-                let commissionsLog = "עמלות מכירה - לא נכללו בחישוב האוטומטי.";
-                if (salaryCommissions > 0) {
-                    if (detectedKey === "יבוא מסחר" || detectedKey === "רשתות שיווק") {
-                        totalInsuredSalary += salaryCommissions;
-                        commissionsLog = "עמלות מכירה אישיות קבועות נכללות בשכר המבוטח בענף זה על פי פסיקה ענפית.";
+
+                // שלבי מנוע ההכרעה המדורג
+                let step1_html = "";
+                let step2_html = "";
+                let step3_html = "";
+                let step4_html = "";
+                let final_verdict_key = "פנסיה חובה"; 
+                let alert_box_html = "";
+
+                // -----------------------------------------------------------------
+                // שלב 1: סיווג מעסיק למ"ס (הגדרת ענף כלכלי ראשי לפי בחירה)
+                // -----------------------------------------------------------------
+                step1_html = `<strong>סטטוס סיווג למ"ס:</strong> המעסיק סווג ראשונית תחת ענף הפעילות המבוקש: <u>${selectedSector}</u> בהתאם לסיווג האחיד של ענפי הכלכלה 2011.`;
+
+                // -----------------------------------------------------------------
+                // שלב 2: התאמה להגדרת מעסיק בצו (בדיקת עיקר עיסוק המעסיק מול לשון הצו והרישוי)
+                // -----------------------------------------------------------------
+                let isEmployerMatch = true;
+                let employerMatchReason = "";
+
+                // הגנת חסימה מובנית א': בדיקה האם המשתמש בודק עובד ניקיון במסעדה שאינה קבלן ניקיון
+                if (selectedSector === "הסעדה" && workerRole.toLowerCase().includes("ניק") && !businessDesc.toLowerCase().includes("קבלן")) {
+                    isEmployerMatch = false;
+                    employerMatchReason = `<strong>נכשל בשלב המעסיק:</strong> המעסיק מוגדר כעסק בתחום ההסעדה/מסעדנות. צו ההרחבה בענף הניקיון קובע במפורש כי הוא חל אך ורק על 'מעסיק' שהוא קבלן שירותי ניקיון או חברת תחזוקה (ענף 812 למ"ס). מכיוון שמסעדה אינה קבלן שירות, צו הניקיון <strong>נחסם מיד בשלב זה</strong>, ללא תלות בעבודת העובד.`;
+                    final_verdict_key = "פנסיה חובה";
+                } 
+                // הגנת חסימה מובנית ב': בדיקת הגדרת מעסיק בענף ההסעדה (הסעדה מוסדית מול מסעדות ואולמות)
+                else if (selectedSector === "הסעדה") {
+                    const isInstitutionalCatering = document.getElementById("ctx_is_institutional_catering").checked;
+                    if (!isInstitutionalCatering) {
+                        isEmployerMatch = false;
+                        employerMatchReason = `<strong>נכשל בשלב המעסיק (מבחן הסעדה מוסדית):</strong> המערכת זיהתה כי העסק פועל כנסגרת מסעדה, בית קפה או אולם אירועים, ולא כקבלן למתן שירותי הסעדה פנימית ומוסדית קבועה אצל לקוחות (חברות, מוסדות, בתי ספר). בהתאם ללשון הגדרת המעסיק בצו, מסעדות ואולמות אירועים <strong>מוחרגים מפורשות</strong> מצו שירותי ההסעדה המוסדי, ולפיכך הצו הענפי נחסם. התחולה מועברת לצו השיורי המשקי.`;
+                        final_verdict_key = "פנסיה חובה";
                     } else {
-                        commissionsLog = "עמלות מכירה - בדרך כלל אינן חלק מהשכר התעריפי אלא אם הוכח שהן מהוות פיקציה להסתרת שכר יסוד.";
+                        employerMatchReason = `<strong>אושר בשלב המעסיק:</strong> העסק עונה להגדרת מעסיק בצו שירותי הסעדה מוסדיים (מתן שירות הסעדה פנימית במוסדות וחברות באמצעות התקשרות קבועה).`;
+                        final_verdict_key = "הסעדה";
                     }
                 }
-                
-                let premiumLog = "פרמיות ובונוסים מותנים - אינם נכללים בשכר הקובע לפנסיה על פי פסיקת בתי הדין לעבודה, אלא אם מדובר ברכיב גלובלי המשולם ללא תנאי.";
-                if (salaryAllowances > 0) {
-                    totalInsuredSalary += salaryAllowances;
-                    premiumLog += " (תוספות השכר הקבועות שהוזנו בסך " + salaryAllowances + " ש\"ח נוספו לשכר המבוטח).";
+                // הגנת חסימה מובנית ג': אבחנת רישוי קשיחה בין שמירה (קבלן שירות עם רישיון) למוקד וסיור (ללא רישיון)
+                else if (selectedSector === "שמירה" || selectedSector === "מוקד") {
+                    const hasSecurityLicense = document.getElementById("ctx_has_security_license").checked;
+
+                    if (selectedSector === "שמירה" && !hasSecurityLicense) {
+                        isEmployerMatch = false;
+                        employerMatchReason = `<strong>נכשל בשלב המעסיק (מבחן הרישוי לענף השמירה):</strong> נבחר ענף השמירה, אך סומן כי המעסיק אינו מחזיק ברישיון כדין לפעול כקבלן שירותי שמירה ואבטחה. על פי לשון הצו והפסיקה, היעדר רישיון פוסל את תחולת צו השמירה (ענף 801). החברה תסווג לענף המוקד והסיור (ענף 802) בלבד, ובתנאי שהעובדים מועסקים בשירותי מוקד או סיור.`;
+                        final_verdict_key = "מוקד";
+                    } else if (selectedSector === "מוקד" && hasSecurityLicense) {
+                        employerMatchReason = `<strong>אושר/סווג מחדש בשלב המעסיק:</strong> המעסיק מחזיק ברישיון חברת שמירה, מה שמצביע על זיקה מהותית לענף השמירה והאבטחה (801) ולא רק למוקד וסיור טהור. עיקר העיסוק והתחולה ייקבעו בהתאם לרישוי ולסיווג האחיד.`;
+                        final_verdict_key = "שמירה";
+                    } else {
+                        employerMatchReason = `<strong>אושר בשלב המעסיק:</strong> סטטוס הרישוי תואם את הגדרת המעסיק בצו הרלוונטי (שמירה מחייב רישיון, מוקד וסיור חל על מערכות אלקטרוניות ללא דרישת רישיון קבלן שמירה).`;
+                        final_verdict_key = selectedSector;
+                    }
+                }
+                else {
+                    employerMatchReason = `<strong>אושר בשלב המעסיק:</strong> תיאור הפעילות של המעסיק עולה בקנה אחד עם הגדרת המעסיק המפורטת בלשון צו ההרחבה המשולב של ענף ה-<u>${selectedSector}</u>.`;
+                    final_verdict_key = selectedSector;
                 }
 
-                salaryBreakdownHTML = `
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>רכיב שכר</th>
-                                    <th>סכום שהוזן</th>
-                                    <th>סטטוס לצורך הפרשות</th>
-                                    <th>נימוק משפטי / מקור</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>שכר יסוד / תעריפי</td>
-                                    <td>${salaryBase} ש"ח</td>
-                                    <td>נכלל בבסיס</td>
-                                    <td>${calculationLog}</td>
-                                </tr>
-                                <tr>
-                                    <td>עמלות מכירה</td>
-                                    <td>${salaryCommissions} ש"ח</td>
-                                    <td>${(detectedKey === "יבוא מסחר" || detectedKey === "רשתות שיווק") ? "נכלל" : "לא נכלל"}</td>
-                                    <td>${commissionsLog}</td>
-                                </tr>
-                                <tr>
-                                    <td>פרמיות / בונוסים ותוספות</td>
-                                    <td>${salaryPremiums + salaryAllowances} ש"ח</td>
-                                    <td>נכלל חלקי</td>
-                                    <td>${premiumLog}</td>
-                                </tr>
-                                <tr style="background-color: #f1f5f9; font-weight:700;">
-                                    <td>סך שכר מבוטח משוער</td>
-                                    <td colspan="3">${totalInsuredSalary.toFixed(2)} ש"ח</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                `;
-            } else {
-                salaryBreakdownHTML = `<p><em>לא הוזנו נתוני שכר בסיס בסימולטור. מוצגות הוראות והגדרות הצו הכלליות בלבד ללא חישוב סכומים חודשיים.</em></p>`;
-            }
+                step2_html = `<p>${employerMatchReason}</p><p style="font-size:12px; color:var(--text-muted); margin-top:5px;"><em>*כלל יסוד: תחולת צו הרחבה נבחנת לפי עיקר עיסוקו של המעסיק ולא לפי עבודת העובד.</em></p>`;
 
-            let alertBoxHTML = "";
-            if (detectedKey === "חקלאות" || detectedKey === "הובלה" || detectedKey === "רשתות שיווק") {
-                alertBoxHTML = `
-                    <div class="alert-warning-box">
-                        <strong>לתשומת לבך (הסדר מיטיב משקי):</strong> החל מהמועד הקבוע בצו ההרחבה לפנסיה חובה במשק (עדכוני 2016), העובד עשוי להיות זכאי להסדר מיטיב יותר ברכיבי אחוזי ההפרשה מזה הקבוע במקור בצו הענפי ההיסטורי. המעסיק מחויב להפריש לפחות את רצפת אחוזי המשק (6.5% מעסיק, 6% עובד) במידה והבסיס הענפי הישן נמוך מהם, אלא אם בסיס השכר הרחב (כמו 150% בהובלה) מפצה על כך מהותית.
-                    </div>
-                `;
-            }
+                // -----------------------------------------------------------------
+                // שלב 3: בדיקת הגדרת העובד (רק אם שלב 1 ו-2 עברו בהצלחה)
+                // -----------------------------------------------------------------
+                if (isEmployerMatch || final_verdict_key === "מוקד") {
+                    const lawData = libraryData[final_verdict_key];
+                    // בדיקה משלימה באבחנת שמירה/מוקד: האם העובד אכן מועסק במוקד או סיור
+                    if (selectedSector === "שמירה" && !document.getElementById("ctx_has_security_license").checked) {
+                        const isWorkerValidForPatrol = workerRole.toLowerCase().includes("מוקד") || workerRole.toLowerCase().includes("סייר") || workerRole.toLowerCase().includes("סיור") || workerRole.toLowerCase().includes("טכנאי");
+                        if (isWorkerValidForPatrol) {
+                            step3_html = `<p><strong>בדיקת הגדרת עובד:</strong> העובד מועסק בתפקיד <strong>"${workerRole}"</strong>. תפקיד זה עונה על תנאי ענף המוקד והסיור (שירותי מוקד או סיור בפועל).</p>`;
+                        } else {
+                            step3_html = `<p><strong>נכשל בשלב העובד:</strong> הועבר לענף מוקד עקב חוסר רישוי המעסיק, אך תפקיד העובד ("${workerRole}") אינו עונה על הגדרת עובדי מוקד או סיור. התחולה מועברת לצו השיורי הכללי.</p>`;
+                            final_verdict_key = "פנסיה חובה";
+                        }
+                    } else {
+                        step3_html = `
+                            <p><strong>בדיקת הגדרת עובד:</strong> העובד מועסק בתפקיד <strong>"${workerRole}"</strong> במחלקת ${workerDept}.</p>
+                            <p style="margin-top:5px;"><strong>התאמה ללשון הצו:</strong> ${lawData ? lawData.workerDef : "נמצא מתאים להגדרות הכלליות."}</p>
+                        `;
+                    }
+                } else {
+                    step3_html = `<p style="color:var(--warning-color); font-weight:600;">שלב זה מבוטל אוטומטית - התחולה הענפית נפסלה בשלב 2 בשל אי-התאמת המעסיק להגדרות הצו.</p>`;
+                }
 
-            let partialDataHeader = "";
-            if (!workerRole || !workerSeniority || !workerAge || salaryBase === 0) {
-                partialDataHeader = `
-                    <div class="alert-info-box" style="border-right-color: var(--accent-color); background-color: #fef3c7; color: #92400e;">
-                        <strong>לתשומת לב המשתמש:</strong> חוות הדעת הופקה על בסיס הנתונים החלקיים שהוזנו בסימולטור, וייתכן שנדרש מידע נוסף לצורך קביעה סופית ומדויקת לחלוטין.
-                    </div>
-                `;
-            }
-
-            // חילוץ נתוני סיווג למ"ס בטוחים
-            const cbsData = branch.cbs || { mainCode: "U", mainTitle: "לא מסווג", subCode: "00", subTitle: "ללא", microCode: "0000", microTitle: "רשת ביטחון כללית" };
-
-            // פירוק אחוזי ההפרשות בצורה בטוחה ומבוקרת למניעת קריסות קונסול
-            let rate1 = "6%", rate2 = "6.5%", rate3 = "6%";
-            if (branch.rates && branch.rates.includes(',')) {
-                const parts = branch.rates.split(',');
-                if (parts[0]) rate1 = parts[0].replace('תגמולי עובד:', '').trim();
-                if (parts[1]) rate2 = parts[1].replace('תגמולי מעסיק:', '').trim();
-                if (parts[2]) rate3 = parts[2].replace('פיצויים:', '').trim();
-            } else if (branch.rates) {
-                rate2 = branch.rates;
-            }
-
-            const opinionHTML = `
-                ${partialDataHeader}
-                <div class="report-section">
-                    <h2>חוות דעת משפטית - תחולת צו הרחבה וזכויות פנסיוניות</h2>
-                    <p style="font-size:12px; color:var(--text-muted);">הופק בתאריך: 11 ביוני 2026 | מזהה פנימי: משרד העבודה - יחסי עבודה</p>
-                </div>
-
-                <div class="report-section" style="background: #fdfefe; border: 1px dashed var(--border-color); padding: 15px; border-radius: 6px; margin-bottom: 20px;">
-                    <h3 style="color: var(--primary-color); border-bottom: 1px solid var(--border-color); padding-bottom: 4px;">ניתוח מובנה על פי הסיווג האחיד של ענפי הכלכלה (הלמ"ס)</h3>
-                    <div class="report-grid" style="background-color: #f8fafc; margin-top: 10px;">
-                        <div class="report-item"><span class="lbl">ענף ראשי (סדר)</span><span class="val"><strong>[${cbsData.mainCode}]</strong> ${cbsData.mainTitle}</span></div>
-                        <div class="report-item"><span class="lbl">ענף משנה (קוד)</span><span class="val"><strong>[${cbsData.subCode}]</strong> ${cbsData.subTitle}</span></div>
-                        <div class="report-item"><span class="lbl">תת-ענף (מיקרו)</span><span class="val"><strong>[${cbsData.microCode}]</strong> ${cbsData.microTitle}</span></div>
-                        <div class="report-item"><span class="lbl">רמת ודאות הסיווג</span><span class="val" style="color: var(--success-color); font-weight: 700;">${confidenceLevel}</span></div>
-                    </div>
-                    <p style="font-size:13px; margin-top:10px; color: var(--text-main); line-height: 1.4;">
-                        <strong>הסבר הולכת הסיווג לתחולת הצו:</strong> שיוך פעילות העסק לקוד הלמ"ס הבוחן את תיאור המוצרים והשירותים המרכזיים, בשילוב חלוקת כוח האדם הפנימית (מבחן עיקר העיסוק), יוצר זיקה משפטית ישירה והרמונית אל תוך הגדרות ה\"מעסיק\" וה\"מפעל\" המפורטות בלשון צו ההרחבה ופסיקת בתי הדין לעבודה.
-                    </p>
-                </div>
-
-                <div class="report-section">
-                    <h3>1. פרטי הישות המשפטית והמעסיק שנבחנו</h3>
-                    <div class="report-grid">
-                        <div class="report-item"><span class="lbl">שם המעסיק</span><span class="val">${compName}</span></div>
-                        <div class="report-item"><span class="lbl">מספר עובדים כולל</span><span class="val">${empCount}</span></div>
-                        <div class="report-item"><span class="lbl">תחום מועדף שנבחר</span><span class="val">${mainSector || "לא נבחר - זיהוי אוטומטי"}</span></div>
-                        <div class="report-item"><span class="lbl">מספר סניפים</span><span class="val">${numBranches || "לא הוזן מידע"}</span></div>
-                    </div>
-                    <p style="margin-top:10px; font-size:14px;"><strong>תיאור הפעילות המערכתית:</strong> ${businessDesc}</p>
-                </div>
-
-                <div class="report-section">
-                    <h3>2. צו ההרחבה החל והנמקה משפטית מהותית</h3>
-                    <p style="font-size:16px; font-weight:700; color:var(--primary-color); margin-bottom:8px;">
-                        צו חל משוער: ${branch.name}
-                    </p>
-                    <p><strong>נימוק ומנגנון הכרעה:</strong> ${matchReason}</p>
-                    <p style="margin-top:8px; font-size:14px; background:#f1f5f9; padding:10px; border-radius:4px;">
-                        <strong>מקור משפטי / פסיקה מנחה:</strong> ${branch.jurisprudence}<br>
-                        <em>הערה: קביעת התחולה מבוססת על בחינה אובייקטיבית של עיקר פעילותו של המעסיק וחלוקת כוח האדם הכללית, ולא על פי כותרת החוזה.</em>
-                    </p>
-                    ${specialRoleWarning ? `<p style="margin-top:10px;">${specialRoleWarning}</p>` : ''}
-                </div>
-
-                <div class="report-section">
-                    <h3>3. תנאי זכאות ומועד תחילת ההפרשות לפנסיה</h3>
-                    <div class="report-grid">
-                        <div class="report-item"><span class="lbl">תנאי זכאות כלליים</span><span class="val">${branch.eligibility}</span></div>
-                        <div class="report-item"><span class="lbl">מועד הפעלה בפועל</span><span class="val">${calculatedDateText}</span></div>
-                    </div>
-                </div>
-
-                <div class="report-section">
-                    <h3>4. שיעורי הפרשות וחלוקת אחוזים לקופות</h3>
-                    <div class="report-grid" style="background-color: #ecfdf5;">
-                        <div class="report-item"><span class="lbl">תגמולי עובד (ניכוי)</span><span class="val" style="color:var(--primary-color); font-weight:700;">${rate1}</span></div>
-                        <div class="report-item"><span class="lbl">תגמולי מעסיק (הפרשה)</span><span class="val" style="color:var(--primary-color); font-weight:700;">${rate2}</span></div>
-                        <div class="report-item"><span class="lbl">פיצויי פיטורים (מעסיק)</span><span class="val" style="color:var(--primary-color); font-weight:700;">${rate3}</span></div>
-                    </div>
-                    ${alertBoxHTML}
-                </div>
-
-                <div class="report-section">
-                    <h3>5. הגדרת השכר המבוטח ורכיביו</h3>
-                    <p style="font-size:14px; margin-bottom:8px;"><strong>כללי הענף:</strong> ${branch.insuredSalary}</p>
-                    ${salaryBreakdownHTML}
-                </div>
-
-                <div class="report-section" style="background-color: #fafafa; padding:15px; border-radius:6px;">
-                    <h3>6. הערות משפטיות והוראות פיקוח חיוניות</h3>
-                    <p style="font-size:13px; color:var(--text-main);">
-                        * חובת המעסיק לערוך שימוע כדין ולבדוק אקטיבית קיום קופות קודמות מול העובד.<br>
-                        * זכויות סוציאליות רבות כגון חופשה, מחלה והבראה מבוססות בענף זה על <strong>ותק ענפי מצטבר</strong> ולא רק ותק אצל המעסיק הנוכחי. נטל ההוכחה של הוותק הענפי מוטל על העובד באמצעות מסמכים רשמיים.<br>
-                        * במידה ומתעוררת אי-ודאות עובדתית לגבי עיקר העיסוק (לדוגמה עסק מעורב של מסחר וייצור שבו כוח האדם מחולק שווה בשווה), נדרשת בחינה משפטית פרטנית משלימה של היחידה ליחסי עבודה.
-                    </p>
-                </div>
-            `;
-
-            document.getElementById('opinion-container').innerHTML = opinionHTML;
-            switchPage('output');
-        }
-
-        // --- פונקציות עזר: העתקת טקסט ---
-        function copyOpinion() {
-            const container = document.getElementById('opinion-container');
-            const text = container.innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("חוות הדעת הועתקה בהצלחה לקליפבורד לשילוב במסמכים חיצוניים!");
-            }).catch(err => {
-                alert("שגיאה בהעתקת הטקסט: " + err);
-            });
-        }
-
-        // --- ניהול וטעינת ספריית צווי ההרחבה המובנית ---
-        function initLibrary() {
-            const menu = document.getElementById('libMenu');
-            menu.innerHTML = "";
-            
-            Object.keys(libraryData).forEach((key, index) => {
-                const btn = document.createElement('button');
-                btn.className = 'lib-menu-item';
-                if (index === 0) btn.classList.add('active');
-                btn.innerText = libraryData[key].name;
-                btn.onclick = (e) => showLibDetails(key, e);
-                btn.setAttribute('data-key', key);
-                menu.appendChild(btn);
-            });
-
-            showLibDetails(Object.keys(libraryData)[0]);
-        }
-
-        function showLibDetails(key, event) {
-            if (event && event.currentTarget) {
-                document.querySelectorAll('.lib-menu-item').forEach(b => b.classList.remove('active'));
-                event.currentTarget.classList.add('active');
-            }
-
-            const data = libraryData[key];
-            const content = document.getElementById('libContent');
-
-            let qnaHTML = "";
-            if (data.qna && data.qna.length > 0) {
-                qnaHTML = `<h3>שאלות ותשובות נפוצות בענף</h3>`;
-                data.qna.forEach(item => {
-                    qnaHTML += `
-                        <p style="font-weight:600; color:var(--primary-color); margin-top:8px;">שאלת מוקד: ${item.q}</p>
-                        <p style="margin-bottom:8px; font-size:14px; background:#f8fafc; padding:8px; border-right:3px solid var(--success-color);">תשובה והנחיה: ${item.a}</p>
+                // -----------------------------------------------------------------
+                // שלב 4: הצלבת פסיקה אקטיבית
+                // -----------------------------------------------------------------
+                let jurisprudenceApplied = "לא זוהתה פסיקה חריגה ספציפית המשנה את סטטוס התחולה במקרה הנוכחי. הניתוח בוצע על בסיס הכללים היבשים.";
+                
+                // בדיקת פסיקת ענף הבנייה (הלכת חשמל כרמיאל)
+                if (selectedSector === "בנייה") {
+                    const isProjectSite = document.getElementById("ctx_bniya_project").checked;
+                    if (!isProjectSite) {
+                        final_verdict_key = "פנסיה חובה"; 
+                        jurisprudenceApplied = `
+                            <span style="color:var(--warning-color); font-weight:600;">הפעלת כלל פסיקה קשיח - בר\"ע (ארצי) 59618-01-23 א. חשמל כרמיאל בע\"מ - אולג פונטוס (02.03.2023):</span><br>
+                            בהתאם להנחיות הפסיקה המצויה במאגר, נקבע כי פעילויות של התקנה, תיקונים או שיפוצים יסווגו כפעילויות המתבצעות בענף הבנייה רק כל עוד הן חלק מתהליך של מיזם בנייה (אתר בנייה אקטיבי). 
+                            מכיוון שהפעילות אינה מבוצעת במסגרת מיזם בנייה, חלה החרגה מפורשת וצו ההרחבה של ענף הבנייה <strong>אינו חל במקרה זה</strong>. התחולה מועברת לצו הכללי.
+                        `;
+                        alert_box_html = `
+                            <div class="alert-warning-box">
+                                <strong>אזהרת פסיקה (הלכת חשמל כרמיאל):</strong> צו ענף הבנייה הוסר מהמעסיק עקב אי-עמידה בתנאי המהותי של "מיזם בנייה".
+                            </div>
+                        `;
+                    } else {
+                        jurisprudenceApplied = `הוצלבה הלכת <strong>חשמל כרמיאל</strong>. אושר כי העבודה מתבצעת במיזם בנייה/אתר בנייה אקטיבי, ולכן צו הבנייה 2015 שומר על תחולתו.`;
+                    }
+                } 
+                else if (selectedSector === "הסעדה" && !document.getElementById("ctx_is_institutional_catering").checked) {
+                    jurisprudenceApplied = `
+                        <span style="color:var(--warning-color); font-weight:600;">החרגה מפורשת מלשון הצו:</span><br>
+                        על פי הגדרת מעסיק מבוססת בענף המזון, צו שירותי הסעדה מוסדיים מחריג קטגורית מסעדות, בתי קפה, ואולמות וגני אירועים. מאחר והעסק אינו מספק שירות אצל לקוחות מוסדיים קבועים, לא חל עליו צו ענפי ייחודי זה ותנאיו נקבעים על פי צו פנסיה חובה הכללי במשק.
                     `;
-                });
+                }
+                else if ((selectedSector === "שמירה" || selectedSector === "מוקד") && !document.getElementById("ctx_has_security_license").checked) {
+                    jurisprudenceApplied = `
+                        <span style="color:var(--success-color); font-weight:600;">הצלבת פסיקה ענפית - אבחנת חברת שמירה מול מוקד וסיור:</span><br>
+                        הוצלבו מבחני הפסיקה הדנים בהבחנה בין צו השמירה לצו המוקד. הפסיקה קובעת כי חובת רישיון קבלן שירות חלה על שמירה סטטית ואבטחה פיזית. בהיעדר רישיון, המעסיק אינו יכול להיחשב כחברת שמירה, ותחולת הצו מוסטת לענף המוקד האלקטרוני והסיור, ובלבד שהוכח כי העובדים מועסקים בפועל בשירותי מוקד או סיור מבצעיים.
+                    `;
+                }
+                else if (selectedSector === "הסעדה" && workerRole.toLowerCase().includes("ניק")) {
+                    jurisprudenceApplied = `
+                        <span style="color:var(--success-color); font-weight:600;">הצלבת פסיקה ענפית - ע\"ע 53175-10-17 אלינור דמקו אבבה - אלוניאל בע\"מ:</span><br>
+                        הוצלבה ההלכה המצויה בצו לעניין עובד הניקיון - הבהר בפסיקות בתי הדין כי עובד ניקיון במסעדה נחשב עובד של ענף המסעדנות ולא עובד של צו הניקיון, שכן המסעדה אינה חברת שמירה או ניקיון.
+                    `;
+                }
+                else if (selectedSector === "כוח אדם") {
+                    jurisprudenceApplied = `הוצלבה הלכת <strong>ע\"ע 38435-05-20</strong>: נטל ההוכחה לתנאי צו ההרחבה ומיקומו הגיאוגרפי חל על העובד.`;
+                }
+
+                step4_html = `<p>${jurisprudenceApplied}</p>`;
+
+                // שליפת נתוני הצו המכריע הסופי
+                const finalLaw = libraryData[final_verdict_key];
+
+                // חישובים טכניים של שכר מבוטח
+                let baseForPension = salaryBase;
+                if (final_verdict_key === "הובלה" && salaryPremiums > 0) {
+                    baseForPension += salaryPremiums; 
+                }
+                if (salaryCommissions > 0) {
+                    baseForPension += salaryCommissions; 
+                }
+                baseForPension += salaryAllowances;
+
+                // יצירת תצוגת חוות הדעת
+                let out = `
+                    <h2 style="border-bottom: 3px solid var(--primary-color);">חוות דעת משפטית ממוחשבת - ממצאי בדיקת תחולת צו</h2>
+                    
+                    <div class="report-section">
+                        <h3>פרטי בדיקה כלליים</h3>
+                        <div class="report-grid">
+                            <div class="report-item"><span class="lbl">שם המעסיק הנבדק</span><span class="val">${compName}</span></div>
+                            <div class="report-item"><span class="lbl">מספר עובדים בעסק</span><span class="val">${empCount}</span></div>
+                            <div class="report-item"><span class="lbl">תפקיד העובד שנבחן</span><span class="val">${workerRole}</span></div>
+                            <div class="report-item"><span class="lbl">הענף המכריע שנפסק</span><span class="val" style="color:var(--primary-color); font-weight:700;">${finalLaw.name}</span></div>
+                        </div>
+                    </div>
+
+                    ${alert_box_html}
+
+                    <div class="report-section" style="background:#f1f5f9; padding:15px; border-radius:6px; margin-bottom:20px;">
+                        <h3 style="margin-top:0;">מתווה מנוע ההכרעה התלת-שלבי (משופר ביצועים)</h3>
+                        <div style="margin-bottom:10px; padding:8px; border-left:3px solid var(--secondary-color); background:white;">
+                            <strong style="color:var(--primary-color);">שלב 1: סיווג מעסיק למ"ס (2011)</strong><br>${step1_html}
+                        </div>
+                        <div style="margin-bottom:10px; padding:8px; border-left:3px solid var(--secondary-color); background:white;">
+                            <strong style="color:var(--primary-color);">שלב 2: התאמה להגדרת מעסיק בצו</strong><br>${step2_html}
+                        </div>
+                        <div style="margin-bottom:10px; padding:8px; border-left:3px solid var(--secondary-color); background:white;">
+                            <strong style="color:var(--primary-color);">שלב 3: בדיקת הגדרת העובד ותפקידו</strong><br>${step3_html}
+                        </div>
+                        <div style="padding:8px; border-left:3px solid var(--accent-color); background:white;">
+                            <strong style="color:var(--primary-color);">שלב 4: הצלבת פסיקת בתי הדין לעבודה</strong><br>${step4_html}
+                        </div>
+                    </div>
+
+                    <div class="report-section">
+                        <h3>פרטי צו ההרחבה החל ותנאי הזכאות</h3>
+                        <p><strong>שם הצו המשפטי:</strong> ${finalLaw.name}</p>
+                        <p><strong>מקורות הידע והצווים המשולבים:</strong> ${finalLaw.orders}</p>
+                        <p style="margin-top:8px;"><strong>לשון הגדרת מעסיק בצו:</strong> ${finalLaw.employerDef}</p>
+                        <p style="margin-top:8px;"><strong>מועד תחילת הזכאות להפרשות:</strong> ${finalLaw.eligibility}</p>
+                    </div>
+
+                    <div class="report-section">
+                        <h3>שיעורי הפרשות וסימולציה כספית טכנית</h3>
+                        <p><strong>שיעורי ההפרשות בצו זה:</strong> ${finalLaw.rates}</p>
+                        <p><strong>הגדרת השכר המבוטח בצו:</strong> ${finalLaw.insuredSalary}</p>
+                        <p style="margin-top:8px; font-weight:600; color:var(--primary-color);">בסיס שכר מחושב לפנסיה בסימולציה זו: ₪${baseForPension.toFixed(2)}</p>
+                    </div>
+
+                    <div class="report-section">
+                        <h3>חריגים ופסיקה מורחבת של הענף</h3>
+                        <p><strong>חריגים והחרגות מהצו:</strong> ${finalLaw.exceptions}</p>
+                        <p style="margin-top:8px;"><strong>פסיקת בתי הדין הרלוונטית שהוצלבה:</strong> ${finalLaw.jurisprudence}</p>
+                    </div>
+                `;
+
+                document.getElementById("opinion-container").innerHTML = out;
+                switchPage('output');
+
+            } catch (err) {
+                console.error("שגיאה בהפעלת מנוע ההחלטה: ", err);
+                alert("קרתה שגיאה בעיבוד הנתונים: " + err.message);
             }
-
-            const cbsInfo = data.cbs ? `<div style="margin-bottom:12px; background: #f8fafc; padding: 8px; border-left: 3px solid var(--secondary-color);"><strong>מפתח סיווג אחיד למ"ס:</strong> סדר ${data.cbs.mainCode} (${data.cbs.mainTitle}) | קוד ענף ${data.cbs.subCode} | תת-ענף ${data.cbs.microCode} (${data.cbs.microTitle})</div>` : "";
-
-            content.innerHTML = `
-                <h2>${data.name}</h2>
-                <p style="font-size:13px; color:var(--text-muted); margin-bottom:15px;"><strong>צווים היסטוריים ועדכונים:</strong> ${data.orders}</p>
-                ${cbsInfo}
-                <div style="margin-bottom:12px;"><strong>הגדרת מעסיק בתקנות:</strong><br><span style="font-size:14px; color:#334155;">${data.employerDef}</span></div>
-                <div style="margin-bottom:12px;"><strong>הגדרת עובד מזכה:</strong><br><span style="font-size:14px; color:#334155;">${data.workerDef}</span></div>
-                <div style="margin-bottom:12px;"><strong>מועד תחילת זכאות לפנסיה:</strong><br><span style="font-size:14px; color:#334155;">${data.eligibility}</span></div>
-                <div style="margin-bottom:12px;"><strong>שיעורי הפרשות:</strong><br><span style="font-size:14px; color:#334155; font-weight:600;">${data.rates}</span></div>
-                <div style="margin-bottom:12px;"><strong>הגדרת השכר המבוטח ורכיבים:</strong><br><span style="font-size:14px; color:#334155;">${data.insuredSalary}</span></div>
-                <div style="margin-bottom:12px;"><strong>חריגים וסייגים בולטים:</strong><br><span style="font-size:14px; color:#334155;">${data.exceptions}</span></div>
-                <div style="margin-bottom:15px; background-color:#eff6ff; padding:10px; border-radius:4px;">
-                    <strong>פסיקה מרכזית ומנחה:</strong><br><span style="font-size:13px; color:var(--primary-color); font-weight:500;">${data.jurisprudence}</span>
-                </div>
-                ${qnaHTML}
-            `;
         }
 
+        // --- העתקת טקסט חוות הדעת ---
+        function copyOpinion() {
+            try {
+                const container = document.getElementById("opinion-container");
+                navigator.clipboard.writeText(container.innerText);
+                alert("חוות הדעת הועתקה בהצלחה ללוח הגזירים (Clipboard) בפורמט טקסט נקי.");
+            } catch(e) {
+                alert("שגיאה בהעתקה אוטומטית: " + e);
+            }
+        }
+
+        // --- סינון וחיפוש בספרייה ---
         function filterLibrary() {
             try {
                 const query = document.getElementById('libSearch').value.toLowerCase();
@@ -1247,7 +1172,6 @@
                 items.forEach(item => {
                     const text = item.innerText.toLowerCase();
                     const key = item.getAttribute('data-key');
-                    
                     let fullDataText = "";
                     try {
                         fullDataText = JSON.stringify(libraryData[key]).toLowerCase();
@@ -1266,7 +1190,43 @@
             }
         }
 
-        // טעינה ראשונית של המערכת
+        // --- טעינת הספרייה ובניית התפריט הצידי ---
+        function initLibrary() {
+            const menu = document.getElementById("libMenu");
+            menu.innerHTML = "";
+            Object.keys(libraryData).forEach((key, index) => {
+                const btn = document.createElement("button");
+                btn.className = "lib-menu-item" + (index === 0 ? " active" : "");
+                btn.setAttribute("data-key", key);
+                btn.innerText = libraryData[key].name;
+                btn.onclick = function() {
+                    document.querySelectorAll('.lib-menu-item').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    loadLibraryContent(key);
+                };
+                menu.appendChild(btn);
+            });
+            if(Object.keys(libraryData).length > 0) {
+                loadLibraryContent(Object.keys(libraryData)[0]);
+            }
+        }
+
+        function loadLibraryContent(key) {
+            const data = libraryData[key];
+            const content = document.getElementById("libContent");
+            content.innerHTML = `
+                <h2 style="color: var(--primary-color); border-bottom: 2px solid var(--secondary-color); padding-bottom: 5px;">${data.name}</h2>
+                <div style="margin-top: 15px;"><strong>צווי הרחבה ועדכונים מאוחדים:</strong><p>${data.orders}</p></div>
+                <div style="margin-top: 15px;"><strong>הגדרת מעסיק:</strong><p>${data.employerDef}</p></div>
+                <div style="margin-top: 15px;"><strong>הגדרת עובד:</strong><p>${data.workerDef}</p></div>
+                <div style="margin-top: 15px;"><strong>מועד זכאות לפנסיה:</strong><p>${data.eligibility}</p></div>
+                <div style="margin-top: 15px;"><strong>שיעורי הפרשות:</strong><p>${data.rates}</p></div>
+                <div style="margin-top: 15px;"><strong>השכר המבוטח ורכיביו:</strong><p>${data.insuredSalary}</p></div>
+                <div style="margin-top: 15px;"><strong>חריגים והחרגות:</strong><p>${data.exceptions}</p></div>
+                <div style="margin-top: 15px; padding: 10px; background-color: #f8fafc; border-right: 4px solid var(--accent-color);"><strong>פסיקה מרכזית:</strong><p>${data.jurisprudence}</p></div>
+            `;
+        }
+
         window.onload = function() {
             try {
                 initLibrary();
